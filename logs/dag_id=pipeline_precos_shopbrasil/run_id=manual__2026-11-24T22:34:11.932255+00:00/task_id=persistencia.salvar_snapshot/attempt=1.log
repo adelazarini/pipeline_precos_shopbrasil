@@ -1,0 +1,23 @@
+[2026-11-24T22:34:19.620+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-24T22:34:19.632+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pipeline_precos_shopbrasil.persistencia.salvar_snapshot manual__2026-11-24T22:34:11.932255+00:00 [queued]>
+[2026-11-24T22:34:19.638+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pipeline_precos_shopbrasil.persistencia.salvar_snapshot manual__2026-11-24T22:34:11.932255+00:00 [queued]>
+[2026-11-24T22:34:19.638+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-11-24T22:34:19.645+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): persistencia.salvar_snapshot> on 2026-11-24 22:34:11.932255+00:00
+[2026-11-24T22:34:19.648+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=10933) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-11-24T22:34:19.648+0000] {standard_task_runner.py:72} INFO - Started process 10936 to run task
+[2026-11-24T22:34:19.649+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pipeline_precos_shopbrasil', 'persistencia.salvar_snapshot', 'manual__2026-11-24T22:34:11.932255+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_precos.py', '--cfg-path', '/tmp/tmpt8eaw64d']
+[2026-11-24T22:34:19.649+0000] {standard_task_runner.py:105} INFO - Job 41: Subtask persistencia.salvar_snapshot
+[2026-11-24T22:34:19.665+0000] {task_command.py:467} INFO - Running <TaskInstance: pipeline_precos_shopbrasil.persistencia.salvar_snapshot manual__2026-11-24T22:34:11.932255+00:00 [running]> on host 49fef8ec50d4
+[2026-11-24T22:34:19.697+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='pipeline_precos_shopbrasil' AIRFLOW_CTX_TASK_ID='persistencia.salvar_snapshot' AIRFLOW_CTX_EXECUTION_DATE='2026-11-24T22:34:11.932255+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-24T22:34:11.932255+00:00'
+[2026-11-24T22:34:19.697+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-11-24T22:34:19.699+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-11-24T22:34:19.699+0000] {base.py:84} INFO - Retrieving connection 'postgres_***'
+[2026-11-24T22:34:19.705+0000] {pipeline_precos.py:101} INFO - Snapshot de 2026-11-24 gravado (4 categorias)
+[2026-11-24T22:34:19.705+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-11-24T22:34:19.709+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-11-24T22:34:19.709+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=pipeline_precos_shopbrasil, task_id=persistencia.salvar_snapshot, run_id=manual__2026-11-24T22:34:11.932255+00:00, execution_date=20261124T223411, start_date=20261124T223419, end_date=20261124T223419
+[2026-11-24T22:34:19.742+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-24T22:34:19.753+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-24T22:34:19.754+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
